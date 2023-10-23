@@ -35,15 +35,26 @@ class PostalWorker extends Person{
         super(_eyeColor, _ears, _mouth)
     }
 
+    deliver(){
+        console.log('I am delivering the mail')
+    }
+
+    sort(){
+        console.log('I am sorting through the mail')
+    }
 }
 
 class Chef extends Person{
-    constructor(_eyeColor, _ears, _mouth, _chop){
+    constructor(_eyeColor, _ears, _mouth){
         super(_eyeColor, _ears, _mouth)
     }
 
     saute(){
         console.log('I am frying something')
+    }
+
+    chop(){
+        console.log('I am chopping something')
     }
 }
 
@@ -62,10 +73,18 @@ const Jeremy = new Chef('brown', 'brown', 'nice smile')
 console.log(Jeremy)
 Jeremy.saute()
 
-const Lucy = new Siren('brown', 'brown', 'nice smile', 'true')
-console.log(Lucy)
-Lucy.move()
+const Lucy = new Chef('brown', 'brown', 'nice smile')
+Lucy.chop()
 
+
+
+const Luis = new PostalWorker('blue', 'yellow', 'no teeth')
+console.log(Luis)
+Luis.sort()
+
+const Pam = new PostalWorker('orange', 'blue', 'lots of teeth')
+console.log(Pam)
+Pam.deliver()
 
 
 
